@@ -12,7 +12,6 @@ def read_pdf(file_path):
     return text
 
 def count_tokens(text):
-    # Use tiktoken for GPT tokenization (no warnings)
     enc = tiktoken.get_encoding("cl100k_base")  # This is GPT-4's tokenizer
     tokens = enc.encode(text)
     return len(tokens)
